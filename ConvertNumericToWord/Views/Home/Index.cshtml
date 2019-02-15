@@ -1,0 +1,48 @@
+﻿@{
+    Layout=null;
+}
+
+<!doctype html>
+<html>
+<head>
+
+    <title>jQuery num2words Converter Example</title>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    @*<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>*@
+    <script src="~/Scripts/jquery-1.12.0.min.js"></script>
+    <script src="~/Scripts/jquery.num2words.js"></script>
+    @*<script type="text/javascript" language="javascript" src="jquery.num2words.js"></script>*@
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#num').focus();
+           // $('#num').val(Comma(value));
+        });
+        function NumToWord()
+        {
+            
+            $('#demo').num2words();
+        }
+     
+    </script>
+    <style>
+        body {
+            background-color: #fafafa;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 150px auto;
+        }
+    </style>
+</head>
+<body>
+  
+    <div id="demo" class="container">
+        <h1>jQuery num2words Converter Example</h1><h3> Enter amount: </h3>
+        <input id="num" onkeyup="NumToWord()" type="text" class="form-control" placeholder="$"><br>
+        <br>
+        <div class="well"></div>
+    </div>
+</body>
+</html>
